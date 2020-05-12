@@ -1206,6 +1206,7 @@ public:
         SKL_UY = 78,
         KBL = 158,
         KBL_1 = 142,
+		CML = 165, // Comet Lake S
         BDX = 79,
         KNL = 87,
         SKL = 94,
@@ -1379,6 +1380,7 @@ public:
         case BDX:
         case SKL:
         case KBL:
+        case CML:
         case SKX:
             return 4;
         case KNL:
@@ -1626,6 +1628,7 @@ public:
                  || cpu_model == PCM::KNL
                  || cpu_model == PCM::SKL
                  || cpu_model == PCM::KBL
+                 || cpu_model == PCM::CML
                  || cpu_model == PCM::SKX
                );
     }
@@ -1709,6 +1712,7 @@ public:
             || cpu_model == PCM::BROADWELL
             || cpu_model == PCM::SKL
             || cpu_model == PCM::KBL
+            || cpu_model == PCM::CML
             );
     }
 
@@ -1806,6 +1810,7 @@ public:
     {
         return    PCM::SKL == cpu_model
                || PCM::KBL == cpu_model
+               || PCM::CML == cpu_model
                || PCM::SKX == cpu_model
                ;
     }
